@@ -1,2 +1,2 @@
 # php-composer-monolog
-symfony php-composer-monolog
+php-composer-monolog
