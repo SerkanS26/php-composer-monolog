@@ -20,7 +20,7 @@ $log = new Logger($_GET["type"]);
 switch ($_GET["type"]){
     case "EMERGENCY":
         $log->pushHandler(new StreamHandler('path/to/emergency.log', Logger::EMERGENCY));
-//        $log->pushHandler(new NativeMailerHandler('pieters.tg@gmail.com', "error message", "safran84@hotmail.com"));
+//        $log->pushHandler(new NativeMailerHandler('test@gmail.com', "error message", "test@hotmail.com"));
         $log->pushHandler(new BrowserConsoleHandler( Logger::EMERGENCY));
         $log->emergency($_GET["message"]);
         break;
@@ -31,19 +31,19 @@ switch ($_GET["type"]){
         break;
     case "CRITICAL":
         $log->pushHandler(new StreamHandler('path/to/critical.log', Logger::CRITICAL));
-//        $log->pushHandler(new NativeMailerHandler('pieters.tg@gmail.com', "error message", "safran84@hotmail.com"));
+//        $log->pushHandler(new NativeMailerHandler('test@gmail.com', "error message", "test@hotmail.com"));
         $log->pushHandler(new BrowserConsoleHandler( Logger::CRITICAL));
         $log->critical($_GET["message"]);
         break;
     case "ERROR":
         $log->pushHandler(new StreamHandler('path/to/critical.log', Logger::ERROR));
-//        $log->pushHandler(new NativeMailerHandler('pieters.tg@gmail.com', "error message", "safran84@hotmail.com"));
+//        $log->pushHandler(new NativeMailerHandler('test@gmail.com', "error message", "test@hotmail.com"));
         $log->pushHandler(new BrowserConsoleHandler( Logger::ERROR));
         $log->error($_GET["message"]);
         break;
     case "ALERT":
         $log->pushHandler(new StreamHandler('path/to/critical.log', Logger::ALERT));
-//        $log->pushHandler(new NativeMailerHandler('pieters.tg@gmail.com', "error message", "safran84@hotmail.com"));
+//        $log->pushHandler(new NativeMailerHandler('test@gmail.com', "error message", "test@hotmail.com"));
         $log->pushHandler(new BrowserConsoleHandler( Logger::ALERT));
         $log->alert($_GET["message"]);
         break;
